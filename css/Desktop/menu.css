@@ -1,0 +1,31 @@
+header{
+    width: 100%;
+    height: 40px;
+    padding: unset;
+    position: unset;
+    nav{
+        height: 100%;
+        ul{
+            flex-flow: row nowrap;
+            justify-content: center;
+            li{
+                width: fit-content;
+                &:hover{
+                    background-color: unset;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                    text-transform: capitalize;
+                    transition: 400ms;
+                    &:hover{
+                        color: goldenrod;
+                    }
+                }
+            }
+        }
+    }
+}
+input#show , input#close , label[for="show"] , label[for="close"] , div.close{
+    display: none !important;
+}

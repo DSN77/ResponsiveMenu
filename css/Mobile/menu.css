@@ -1,0 +1,93 @@
+header {
+  width: 30%;
+  height: 100vh;
+  background-color: black;
+  box-shadow: 5px 5px 25px black;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: -30%;
+  transition: 500ms;
+  div.close{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    label[for=close]{
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: crimson;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 5px 5px 25px crimson;
+        cursor: pointer;
+        transition: 400ms;
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            transform: scale(85%);
+        }
+    }
+  }
+  nav {
+    width: 100%;
+    ul {
+      width: 100%;
+      height: inherit;
+      list-style: none;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+      li {
+        width: 100%;
+        text-align: center;
+        transition: 400ms;
+        &:hover {
+          background-color: goldenrod;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+label[for="show"] {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px black;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px;
+  transition: 400ms;
+  &:hover {
+    transform: scale(85%);
+  }
+  div {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+  }
+}
+input#show:checked ~ header {
+  left: 0;
+}
+input#show , input#close{
+    display: none;
+}
